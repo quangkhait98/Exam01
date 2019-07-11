@@ -17,6 +17,17 @@ describe('findNumberWordCombination', function () {
 });
 
 
+describe('inserting', function () {
+
+    it('inserting', function () {
+        const variationss = inserting('m98opt')
+        console.log(variationss);
+        assert.notEqual(variationss.indexOf('m-98opt'), -1)
+        assert.notEqual(variationss.indexOf('m-98-opt'), -1)
+        assert.notEqual(variationss.indexOf('m98-opt'), -1)
+    });
+});
+
 
 describe('generateVariation', function () {
 
@@ -29,17 +40,6 @@ describe('generateVariation', function () {
         assert.notEqual(variations2.indexOf('m-98opt'), -1)
         assert.notEqual(variations2.indexOf('m-98-opt'), -1)
         assert.notEqual(variations2.indexOf('m98-opt'), -1)
-    });
-});
-
-describe('inserting', function () {
-
-    it('inserting', function () {
-        const variationss = inserting('m98opt')
-        console.log(variationss);
-        assert.notEqual(variationss.indexOf('m-98opt'), -1)
-        assert.notEqual(variationss.indexOf('m-98-opt'), -1)
-        assert.notEqual(variationss.indexOf('m98-opt'), -1)
     });
 });
 
