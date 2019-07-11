@@ -17,9 +17,9 @@ describe('findNumberWordCombination', function () {
 });
 
 
-describe('inserting', function () {
+describe('inserting test1', function () {
 
-    it('inserting', function () {
+    it('should return the expected result', function () {
         const variationss = inserting('m98opt')
         console.log(variationss);
         assert.notEqual(variationss.indexOf('m-98opt'), -1)
@@ -27,11 +27,20 @@ describe('inserting', function () {
         assert.notEqual(variationss.indexOf('m98-opt'), -1)
     });
 });
+describe('inserting test2', function () {
+
+    it('should return the expected result', function () {
+        const variationss = inserting('m98opt98opt98')
+        console.log(variationss);
+        assert.notEqual(variationss.indexOf('m-98-opt-98-opt-98'), -1)
+        assert.notEqual(variationss.indexOf('m98opt-98-opt-98'), -1)
+    });
+});
 
 
 describe('generateVariation', function () {
 
-    it('generateVariation', function () {
+    it('should return the expected result', function () {
         const matchedStrings = findNumberWordCombination('Products are created with 132cxvx SKUs and MXX and CSV and 79 and mic7979 and m98opt options')
         const variations2 = generateVariation(matchedStrings);
         console.log(variations2)

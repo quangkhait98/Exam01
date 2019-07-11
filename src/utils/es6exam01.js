@@ -35,6 +35,7 @@ insertallword = (word, k) => {
       let firsttext = word.substring(0, l + 1);
       let lasttext = word.substring(l + 1);
       arrallword.push(firsttext + "-" + lasttext);
+      word=firsttext + "-" + lasttext;
     }
   }
   return arrallword;
